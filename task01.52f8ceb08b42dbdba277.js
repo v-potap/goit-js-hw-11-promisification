@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{pCJb:function(n,e,t){"use strict";t.r(e);t("JBxO"),t("FdtR");var o=function(n){return new Promise(function(e){setTimeout(function(){e(n)},n)})},i=function(n){return console.log("Resolved after "+n+"ms")};o(2e3).then(i),o(1e3).then(i),o(1500).then(i)}},[["pCJb",0,1]]]);
+//# sourceMappingURL=task01.52f8ceb08b42dbdba277.js.map
