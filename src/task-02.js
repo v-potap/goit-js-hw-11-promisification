@@ -5,21 +5,21 @@ const users = [
   { name: 'Lux', active: false },
 ];
 
-const toggleUserStateOLD = (allUsers, userName, callback) => {
-  const updatedUsers = allUsers.map(user =>
-    user.name === userName ? { ...user, active: !user.active } : user,
-  );
+// const toggleUserStateOLD = (allUsers, userName, callback) => {
+//   const updatedUsers = allUsers.map(user =>
+//     user.name === userName ? { ...user, active: !user.active } : user,
+//   );
 
-  callback(updatedUsers);
-};
+//   callback(updatedUsers);
+// };
 
-const toggleUserStateOLD = (allUsers, userName) => {
-  const updatedUsers = allUsers.map(user =>
-    user.name === userName ? { ...user, active: !user.active } : user,
-  );
-
-  return updatedUsers;
-};
+const toggleUserState = (allUsers, userName) =>
+  new Promise((resolve, reject) => {
+    const updatedUsers = allUsers.map(user =>
+      user.name === userName ? { ...user, active: !user.active } : user,
+    );
+    resolve(updatedUsers);
+  });
 
 const logger = updatedUsers => console.table(updatedUsers);
 
